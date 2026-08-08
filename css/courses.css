@@ -1,0 +1,237 @@
+/* ==========================================================================
+   LUMEN ACADEMY - Course Catalog & Card Stylesheet
+   ========================================================================== */
+
+.catalog-search-bar {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input-control {
+  flex-grow: 1;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.cat-pills-bar {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.cat-pill {
+  padding: 8px 18px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.cat-pill.active, .cat-pill:hover {
+  background-color: var(--color-primary);
+  color: #FFF;
+  border-color: var(--color-primary);
+}
+
+.catalog-filters-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filter-select {
+  padding: 10px 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Course Grid */
+.courses-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.course-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.course-card-thumb {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  position: relative;
+}
+
+.course-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.course-card:hover .course-card-thumb img {
+  transform: scale(1.05);
+}
+
+.course-cat-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 10px;
+  background-color: rgba(23, 37, 84, 0.88);
+  color: #FFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.bookmark-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bookmark-btn.active { color: var(--color-warning); }
+
+.course-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.course-card-inst {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.course-card-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.course-card-progress {
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: var(--bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.progress-txt {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.course-card-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-card-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+/* Enrollment Modal */
+.enrollment-modal-box {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: var(--radius-md);
+  max-width: 520px;
+  width: 90%;
+  box-shadow: var(--shadow-md);
+}
+
+.enroll-summary-receipt {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.empty-courses-box {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+}

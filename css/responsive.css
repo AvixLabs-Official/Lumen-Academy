@@ -1,0 +1,36 @@
+/* ==========================================================================
+   LUMEN ACADEMY - Responsive Reflow Stylesheet
+   360px, 375px, 390px, 430px, 768px, 1024px, 1280px, 1920px
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .courses-catalog-grid, .enrolled-courses-grid { grid-template-columns: repeat(2, 1fr); }
+  .instructors-grid { grid-template-columns: repeat(3, 1fr); }
+  .stats-bar-grid, .dash-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .continue-learning-card { grid-template-columns: 1fr; }
+  .lesson-player-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .nav-links, .nav-actions-desktop { display: none; }
+  .mobile-toggle { display: block; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 650px) {
+  .container { padding: 0 20px; }
+  .courses-catalog-grid, .enrolled-courses-grid, .certificates-list-grid { grid-template-columns: 1fr; }
+  .instructors-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar-grid, .dash-stats-grid { grid-template-columns: 1fr; }
+  .dash-welcome-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .certificate-document-frame { padding: 30px 20px; }
+  .cert-recipient-name { font-size: 1.8rem; padding: 0 10px 4px; }
+}
+
+@media (max-width: 400px) {
+  .instructors-grid { grid-template-columns: 1fr; }
+}

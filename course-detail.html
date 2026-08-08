@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details — Lumen Academy</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/courses.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-name">LUMEN <span>ACADEMY</span></a>
+      <a href="courses.html" class="btn-link" style="color:var(--color-primary); font-weight:700;">← Back to All Courses</a>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 30px); padding-bottom: 100px;">
+    <div class="container" id="course-detail-container">
+      <!-- Rendered dynamically -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMEN ACADEMY. All rights reserved.</div>
+        <div style="font-style:italic;">Lumen Academy is a fictional portfolio demonstration project.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enrollment Modal -->
+  <div class="modal-overlay" id="enrollment-modal">
+    <div id="enrollment-modal-content"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/courses.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id') || 'crs-01';
+      const course = COURSES_DATA.find(c => c.id === id) || COURSES_DATA[0];
+      const inst = INSTRUCTORS_DATA.find(i => i.id === course.instructorId);
+      const isEnrolled = isCourseEnrolled(course.id);
+
+      document.title = `${course.title} — Lumen Academy`;
+      const container = document.getElementById('course-detail-container');
+      if (!container) return;
+
+      container.innerHTML = `
+        <div style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:48px; align-items:start;">
+          <div>
+            <span class="section-tag">${course.category} • ${course.level}</span>
+            <h1 style="font-size:3rem; margin:8px 0 16px;">${course.title}</h1>
+            <p style="font-size:1.15rem; color:var(--text-muted); line-height:1.7; margin-bottom:28px;">${course.description}</p>
+
+            <div style="display:flex; gap:24px; font-weight:700; color:var(--text-secondary); margin-bottom:40px; padding:20px; background:#FFF; border:1px solid var(--border-color); border-radius:var(--radius-sm);">
+              <div>★ ${course.rating} (${course.reviewCount} Ratings)</div>
+              <div>⏱ ${course.duration} Total</div>
+              <div>📖 ${course.lessonsCount} Lessons</div>
+              <div>👥 ${course.students} Learners</div>
+            </div>
+
+            <h3>What You'll Learn</h3>
+            <ul style="margin:16px 0 40px; padding-left:20px; color:var(--text-secondary); line-height:1.8;">
+              <li>Core fundamentals and industry best practices in ${course.category}.</li>
+              <li>Hands-on practical projects to add directly to your career portfolio.</li>
+              <li>Step-by-step guidance from ${inst ? inst.name : 'expert instructors'}.</li>
+              <li>Lifetime access to curriculum updates and completion certificate.</li>
+            </ul>
+
+            <h3>Instructor Spotlight</h3>
+            <div style="display:flex; gap:20px; align-items:center; background:#FFF; border:1px solid var(--border-color); padding:24px; border-radius:var(--radius-md); margin-top:16px;">
+              <img src="${inst ? inst.avatar : ''}" style="width:72px; height:72px; border-radius:50%; object-fit:cover;">
+              <div>
+                <h4 style="font-size:1.2rem;">${inst ? inst.name : 'Faculty'}</h4>
+                <div style="font-size:0.8rem; color:var(--color-primary); font-weight:700; text-transform:uppercase;">${inst ? inst.role : ''}</div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">${inst ? inst.bio : ''}</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#FFF; border:1px solid var(--border-color); padding:32px; border-radius:var(--radius-md); position:sticky; top:100px; box-shadow:var(--shadow-md);">
+            <div style="aspect-ratio:16/9; overflow:hidden; border-radius:var(--radius-sm); margin-bottom:24px;">
+              <img src="${course.thumbnail}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+
+            <div style="font-size:2.5rem; font-weight:800; color:var(--color-navy); margin-bottom:8px;">${course.priceFormatted}</div>
+            <p style="font-size:0.85rem; color:var(--color-success); font-weight:700; margin-bottom:24px;">✓ Full Lifetime Access + Verified Certificate</p>
+
+            ${isEnrolled ? `
+              <a href="lesson.html?id=${course.id}" class="btn btn-primary" style="width:100%;">Continue Learning →</a>
+            ` : `
+              <button class="btn btn-primary" style="width:100%;" onclick="openEnrollmentModal('${course.id}')">Enroll Now →</button>
+            `}
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

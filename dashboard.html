@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal — Lumen Academy</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/courses.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-name">LUMEN <span>ACADEMY</span></a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="courses.html" class="nav-link">Explore Courses</a></li>
+          <li><a href="dashboard.html" class="nav-link" style="color:var(--color-primary);">My Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions nav-actions-desktop">
+        <a href="courses.html" class="btn btn-outline">+ Browse More Courses</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 30px); padding-bottom: 100px;">
+    <div class="container" id="dashboard-main-container">
+      <!-- Rendered dynamically by js/dashboard.js -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMEN ACADEMY. All rights reserved.</div>
+        <div style="font-style:italic;">Lumen Academy is a fictional portfolio demonstration project.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* ==========================================================================
+   LUMEN ACADEMY - Official Printable Certificate Stylesheet
+   ========================================================================== */
+
+.certificate-page-bg {
+  min-height: 100vh;
+  background-color: var(--color-navy);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificate-document-frame {
+  background-color: #FFFFFF;
+  border: 12px solid #1E293B;
+  outline: 2px solid var(--color-accent);
+  outline-offset: -8px;
+  padding: 60px 80px;
+  max-width: 960px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  color: #111827;
+}
+
+.cert-seal-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-navy);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 4px 12px rgba(244, 201, 93, 0.4);
+}
+
+.cert-heading-top {
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.cert-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--color-navy);
+  text-transform: uppercase;
+}
+
+.cert-recipient-name {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+  padding: 0 40px 8px;
+  margin: 16px 0 24px;
+}
+
+.cert-course-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 36px;
+}
+
+.cert-footer-grid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.cert-signature-line {
+  border-top: 1px solid #94A3B8;
+  padding-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+  .certificate-document-frame {
+    box-shadow: none;
+    border-width: 6px;
+    padding: 40px;
+  }
+}

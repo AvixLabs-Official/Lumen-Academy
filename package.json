@@ -1,0 +1,19 @@
+{
+  "name": "lumen-academy-lms",
+  "version": "1.0.0",
+  "description": "LUMEN ACADEMY - Online Learning Platform & LMS Web Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "education",
+    "lms",
+    "online-courses",
+    "edtech-platform",
+    "freelance-demo"
+  ],
+  "author": "Antigravity Freelance Demo",
+  "license": "MIT"
+}

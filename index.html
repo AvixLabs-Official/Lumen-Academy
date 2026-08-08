@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumen Academy — Learn Skills That Move You Forward</title>
+  <meta name="description" content="Lumen Academy offers practical online courses in UI/UX Design, Web Development, Data Analytics, and Marketing to help you build skills with confidence.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/courses.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-name">LUMEN <span>ACADEMY</span></a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="courses.html" class="nav-link">Explore Courses</a></li>
+          <li><a href="#instructors" class="nav-link">Instructors</a></li>
+          <li><a href="#about" class="nav-link">About Lumen</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions nav-actions-desktop">
+        <a href="dashboard.html" class="btn btn-outline">Student Portal 👤</a>
+        <a href="courses.html" class="btn btn-primary">Get Started →</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <span class="brand-name" style="color:#FFF;">LUMEN <span>ACADEMY</span></span>
+      <button class="modal-close-btn" id="mobile-drawer-close" style="color:#FFF;">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="courses.html">Explore Courses</a></li>
+      <li><a href="#instructors">Instructors</a></li>
+      <li><a href="#about">About Lumen</a></li>
+      <li><a href="dashboard.html">Student Portal</a></li>
+    </ul>
+    <div>
+      <a href="courses.html" class="btn btn-primary" style="width:100%;">Get Started →</a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal-on-scroll">
+          <span class="section-tag">ONLINE SKILL PLATFORM</span>
+          <h1 class="hero-headline">
+            LEARN SKILLS<br>
+            THAT MOVE<br>
+            <span>YOU FORWARD.</span>
+          </h1>
+          <p class="hero-desc">
+            Structured courses, practical real-world projects, and expert-led learning designed to help you build skills that actually matter in modern careers.
+          </p>
+
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <a href="courses.html" class="btn btn-primary">Explore Courses →</a>
+            <a href="dashboard.html" class="btn btn-outline">Launch Student Portal 👤</a>
+          </div>
+        </div>
+
+        <div class="hero-visual-box reveal-on-scroll" style="position:relative;">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop" alt="Lumen Academy Learning Platform" style="border-radius:var(--radius-md); box-shadow:var(--shadow-md);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CREDIBILITY / STATS BAR
+       ========================================================================== -->
+  <section class="credibility-section">
+    <div class="container">
+      <div class="stats-bar-grid">
+        <div>
+          <div class="stat-val-big">25K+</div>
+          <div class="stat-lbl-sub">Active Learners Worldwide</div>
+        </div>
+        <div>
+          <div class="stat-val-big">180+</div>
+          <div class="stat-lbl-sub">Expert-Led Courses</div>
+        </div>
+        <div>
+          <div class="stat-val-big">4.8 / 5</div>
+          <div class="stat-lbl-sub">Average Course Rating</div>
+        </div>
+        <div>
+          <div class="stat-val-big">92%</div>
+          <div class="stat-lbl-sub">Career Outcome Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURED COURSES SHOWCASE
+       ========================================================================== -->
+  <section class="section-padding" style="padding:100px 0;">
+    <div class="container">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:48px;" class="reveal-on-scroll">
+        <div>
+          <span class="section-tag">POPULAR PATHWAYS</span>
+          <h2>Featured Courses</h2>
+          <p class="subheading">Top-rated curriculum designed for beginners and ambitious professionals.</p>
+        </div>
+        <a href="courses.html" class="btn btn-outline">View All 12 Courses →</a>
+      </div>
+
+      <div class="courses-catalog-grid reveal-on-scroll">
+        <!-- Featured Course 1 -->
+        <div class="course-card">
+          <div class="course-card-thumb">
+            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=800&auto=format&fit=crop" alt="UI/UX Design Fundamentals">
+            <span class="course-cat-tag">UI/UX Design</span>
+          </div>
+          <div class="course-card-body">
+            <h3 class="course-card-title"><a href="course-detail.html?id=crs-01">UI/UX Design Fundamentals</a></h3>
+            <p class="course-card-inst">by Maya Chen</p>
+            <div class="course-card-meta">
+              <span>★ 4.9 (420)</span>
+              <span>⏱ 8 hours</span>
+              <span>• Beginner</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-card-price">₹2,499</span>
+              <a href="course-detail.html?id=crs-01" class="btn btn-outline btn-sm">View Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Course 2 -->
+        <div class="course-card">
+          <div class="course-card-thumb">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" alt="Modern JavaScript from Zero">
+            <span class="course-cat-tag">Web Development</span>
+          </div>
+          <div class="course-card-body">
+            <h3 class="course-card-title"><a href="course-detail.html?id=crs-02">Modern JavaScript from Zero</a></h3>
+            <p class="course-card-inst">by Arjun Rao</p>
+            <div class="course-card-meta">
+              <span>★ 4.8 (380)</span>
+              <span>⏱ 12 hours</span>
+              <span>• Intermediate</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-card-price">₹3,499</span>
+              <a href="course-detail.html?id=crs-02" class="btn btn-outline btn-sm">View Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Course 3 -->
+        <div class="course-card">
+          <div class="course-card-thumb">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Data Analytics with Excel">
+            <span class="course-cat-tag">Data & Analytics</span>
+          </div>
+          <div class="course-card-body">
+            <h3 class="course-card-title"><a href="course-detail.html?id=crs-05">Data Analytics with Excel</a></h3>
+            <p class="course-card-inst">by David Park</p>
+            <div class="course-card-meta">
+              <span>★ 4.8 (310)</span>
+              <span>⏱ 9 hours</span>
+              <span>• Beginner</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-card-price">₹2,199</span>
+              <a href="course-detail.html?id=crs-05" class="btn btn-outline btn-sm">View Details →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INSTRUCTORS SHOWCASE
+       ========================================================================== -->
+  <section class="section-padding" id="instructors" style="background-color:var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal-on-scroll">
+        <span class="section-tag">FACULTY & EXPERTS</span>
+        <h2>Learn from Industry Practitioners</h2>
+        <p class="subheading">Instructors actively building products and strategies at leading technology companies.</p>
+      </div>
+
+      <div class="instructors-grid reveal-on-scroll">
+        <div class="inst-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" alt="Maya Chen" class="inst-avatar">
+          <h3 class="inst-name">Maya Chen</h3>
+          <div class="inst-role">Product Design Lead</div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">★ 4.9 • 18.4K Students</p>
+        </div>
+
+        <div class="inst-card">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" alt="Arjun Rao" class="inst-avatar">
+          <h3 class="inst-name">Arjun Rao</h3>
+          <div class="inst-role">Frontend Architect</div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">★ 4.85 • 22.1K Students</p>
+        </div>
+
+        <div class="inst-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" alt="Rhea Sen" class="inst-avatar">
+          <h3 class="inst-name">Rhea Sen</h3>
+          <div class="inst-role">Growth Strategist</div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">★ 4.78 • 12.9K Students</p>
+        </div>
+
+        <div class="inst-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" alt="David Park" class="inst-avatar">
+          <h3 class="inst-name">David Park</h3>
+          <div class="inst-role">Data Lead</div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">★ 4.88 • 15.6K Students</p>
+        </div>
+
+        <div class="inst-card">
+          <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=400&auto=format&fit=crop" alt="Ananya Kapoor" class="inst-avatar">
+          <h3 class="inst-name">Ananya Kapoor</h3>
+          <div class="inst-role">Career Coach</div>
+          <p style="font-size:0.8rem; color:var(--text-muted);">★ 4.92 • 9.8K Students</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <span class="brand-name" style="color:#FFF;">LUMEN <span>ACADEMY</span></span>
+          <p style="color:#94A3B8; font-size:0.9rem; margin-top:12px; max-width:320px;">
+            Learn with purpose. Build with confidence. Practical online courses designed for students and professionals.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color:#FFF; font-size:1.1rem; margin-bottom:16px;">Quick Links</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; font-size:0.9rem; color:#94A3B8;">
+            <li><a href="courses.html">Explore Catalog</a></li>
+            <li><a href="dashboard.html">Student Dashboard</a></li>
+            <li><a href="certificate.html">Verify Certificate</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:#FFF; font-size:1.1rem; margin-bottom:16px;">Categories</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; font-size:0.9rem; color:#94A3B8;">
+            <li><a href="courses.html?cat=uiux">UI/UX Design</a></li>
+            <li><a href="courses.html?cat=webdev">Web Development</a></li>
+            <li><a href="courses.html?cat=data">Data Analytics</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:#FFF; font-size:1.1rem; margin-bottom:16px;">Lumen Faculty</h4>
+          <p style="color:#94A3B8; font-size:0.88rem; line-height:1.7;">
+            Support: <a href="mailto:hello@lumenacademy.demo" style="color:var(--color-primary);">hello@lumenacademy.demo</a><br>
+            London • Bengaluru • San Francisco
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMEN ACADEMY. All rights reserved.</div>
+        <div style="font-style:italic;">Lumen Academy is a fictional portfolio demonstration project.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

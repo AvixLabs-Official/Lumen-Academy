@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Official Certificate of Completion — Lumen Academy</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/certificate.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="certificate-page-bg">
+    <!-- Action Bar -->
+    <div class="no-print" style="margin-bottom:32px; display:flex; gap:16px;">
+      <a href="dashboard.html" class="btn btn-outline" style="background:#FFF;">← Back to Dashboard</a>
+      <button class="btn btn-primary" onclick="window.print();">Download / Print Certificate 🖨️</button>
+    </div>
+
+    <!-- Official Certificate Frame -->
+    <div class="certificate-document-frame" id="certificate-frame">
+      <div class="cert-seal-icon">🎓</div>
+      <div class="cert-heading-top">LUMEN ACADEMY VERIFIED CERTIFICATE</div>
+      <div class="cert-main-title">Certificate of Completion</div>
+
+      <p style="font-size:1.1rem; color:var(--text-muted); margin-top:20px;">This is to certify that</p>
+      <div class="cert-recipient-name" id="cert-student-name">Alex Morgan</div>
+
+      <p style="font-size:1.1rem; color:var(--text-muted); margin-bottom:12px;">has successfully completed all requirements and mastered the curriculum for</p>
+      <div class="cert-course-name" id="cert-course-title">UI/UX Design Fundamentals</div>
+
+      <div class="cert-footer-grid">
+        <div style="text-align:left;">
+          <div class="cert-signature-line" id="cert-instructor-name">Maya Chen</div>
+          <span style="font-size:0.75rem; color:var(--text-muted);">Lead Instructor, Lumen Faculty</span>
+        </div>
+
+        <div>
+          <div style="font-family:monospace; font-size:0.85rem; font-weight:700; color:var(--color-navy);" id="cert-id-code">ID: LUMEN-UIUX-8F42K</div>
+          <span style="font-size:0.72rem; color:var(--text-muted);">Verify at lumenacademy.demo/verify</span>
+        </div>
+
+        <div style="text-align:right;">
+          <div class="cert-signature-line" id="cert-date">August 8, 2026</div>
+          <span style="font-size:0.75rem; color:var(--text-muted);">Date of Issue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const certId = urlParams.get('id') || urlParams.get('courseId');
+
+      const certs = getStoredCertificates();
+      const cert = certs.find(c => c.id === certId || c.courseId === certId) || certs[0];
+
+      if (cert) {
+        document.getElementById('cert-student-name').textContent = cert.studentName || 'Alex Morgan';
+        document.getElementById('cert-course-title').textContent = cert.courseTitle;
+        document.getElementById('cert-instructor-name').textContent = cert.instructorName;
+        document.getElementById('cert-date').textContent = cert.issueDate;
+        document.getElementById('cert-id-code').textContent = `ID: ${cert.id}`;
+      }
+    });
+  </script>
+</body>
+</html>

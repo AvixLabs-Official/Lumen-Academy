@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Check Quiz — Lumen Academy</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/learning.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-name">LUMEN <span>ACADEMY</span></a>
+      <a href="lesson.html?id=crs-01" class="btn-link" style="color:var(--color-primary); font-weight:700;">← Back to Lesson</a>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 30px); padding-bottom: 100px;">
+    <div class="container" id="quiz-container">
+      <!-- Rendered dynamically by js/quiz.js -->
+    </div>
+  </main>
+
+  <!-- Quiz Result Modal -->
+  <div class="modal-overlay" id="quiz-result-modal">
+    <div id="quiz-result-content"></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

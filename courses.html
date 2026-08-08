@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Courses — Lumen Academy</title>
+  <meta name="description" content="Browse 12+ expert-led online courses in UI/UX Design, Web Development, Data Analytics, Marketing, and Career Skills.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/courses.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-name">LUMEN <span>ACADEMY</span></a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="courses.html" class="nav-link" style="color:var(--color-primary);">Explore Courses</a></li>
+          <li><a href="dashboard.html" class="nav-link">Student Portal</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions nav-actions-desktop">
+        <a href="dashboard.html" class="btn btn-primary">My Dashboard 👤</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 30px); padding-bottom: 100px;">
+    <div class="container">
+      <div style="margin-bottom:32px;">
+        <span class="section-tag">CATALOG & LEARNING PATHWAYS</span>
+        <h1>Explore All Courses</h1>
+        <p class="subheading">Learn practical, real-world skills from industry practitioners.</p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="catalog-search-bar">
+        <span style="font-size:1.2rem; color:var(--text-muted);">🔍</span>
+        <input type="text" id="catalog-search-input" placeholder="Search by course title, skill, or keyword (e.g. Figma, JavaScript, Data)..." class="search-input-control">
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="cat-pills-bar" id="catalog-cat-pills">
+        <button class="cat-pill active" data-category="All">All Categories</button>
+        <button class="cat-pill" data-category="Web Development">Web Development</button>
+        <button class="cat-pill" data-category="UI/UX Design">UI/UX Design</button>
+        <button class="cat-pill" data-category="Data & Analytics">Data & Analytics</button>
+        <button class="cat-pill" data-category="Marketing">Marketing</button>
+        <button class="cat-pill" data-category="Business">Business</button>
+        <button class="cat-pill" data-category="Career Skills">Career Skills</button>
+      </div>
+
+      <!-- Filters & Sort Bar -->
+      <div class="catalog-filters-strip">
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <div>
+            <label style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:4px;">Level</label>
+            <select id="catalog-level-select" class="filter-select">
+              <option value="All">All Levels</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:4px;">Price Range</label>
+            <select id="catalog-price-select" class="filter-select">
+              <option value="All">All Prices</option>
+              <option value="under1500">Under ₹1,500</option>
+              <option value="1500to2500">₹1,500 — ₹2,500</option>
+              <option value="over2500">Above ₹2,500</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:16px; align-items:flex-end;">
+          <div>
+            <label style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:4px;">Sort By</label>
+            <select id="catalog-sort-select" class="filter-select">
+              <option value="popular">Most Popular</option>
+              <option value="rating">Highest Rated</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+
+          <button id="catalog-clear-filters-btn" class="btn btn-outline btn-sm">Clear Filters</button>
+        </div>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div class="courses-catalog-grid" id="catalog-courses-grid">
+        <!-- Rendered dynamically by js/courses.js -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 LUMEN ACADEMY. All rights reserved.</div>
+        <div style="font-style:italic;">Lumen Academy is a fictional portfolio demonstration project.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enrollment Modal -->
+  <div class="modal-overlay" id="enrollment-modal">
+    <div id="enrollment-modal-content">
+      <!-- Rendered dynamically by js/courses.js -->
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

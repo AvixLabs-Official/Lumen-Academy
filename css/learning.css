@@ -1,0 +1,213 @@
+/* ==========================================================================
+   LUMEN ACADEMY - Interactive Lesson Player & Quiz Stylesheet
+   ========================================================================== */
+
+.lesson-top-bar {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lesson-player-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  min-height: calc(100vh - 70px);
+}
+
+.lesson-main-stage {
+  padding: 32px;
+  overflow-y: auto;
+}
+
+/* Video Player Mockup */
+.video-mockup-box {
+  background-color: #0F172A;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 32px;
+}
+
+.video-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  background: radial-gradient(circle at center, #1E293B 0%, #0F172A 100%);
+  color: #FFF;
+}
+
+.play-overlay-icon {
+  font-size: 3rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: rgba(37, 99, 235, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.video-controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+
+.video-scrubber-bg {
+  flex-grow: 1;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.video-scrubber-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+}
+
+.takeaways-box {
+  background-color: #EFF6FF;
+  border-left: 4px solid var(--color-primary);
+  padding: 24px;
+  border-radius: var(--radius-sm);
+  margin-top: 32px;
+}
+
+.takeaways-box ul { margin-top: 12px; padding-left: 20px; color: var(--text-secondary); }
+.takeaways-box li { margin-bottom: 8px; }
+
+/* Curriculum Sidebar */
+.lesson-sidebar {
+  background-color: var(--bg-card);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.curriculum-accordion {
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.curr-module-item {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.curr-mod-header {
+  padding: 16px 20px;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.curr-mod-lessons {
+  display: flex;
+  flex-direction: column;
+}
+
+.curr-lesson-link {
+  padding: 14px 20px 14px 32px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.curr-lesson-link:hover, .curr-lesson-link.active {
+  background-color: #EFF6FF;
+  color: var(--color-primary);
+}
+
+.curr-lesson-link.done { color: var(--color-success); }
+.curr-lesson-link.quiz { background-color: #FEF3C7; color: #B45309; }
+
+/* Quiz Box */
+.quiz-wrapper-box {
+  max-width: 720px;
+  margin: 40px auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-question-card {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.q-title { font-size: 1.15rem; margin-bottom: 16px; }
+
+.q-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.q-option-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.92rem;
+  transition: var(--transition);
+}
+
+.q-option-item:hover { border-color: var(--color-primary); }
+
+.quiz-result-box {
+  background-color: var(--bg-card);
+  padding: 48px;
+  border-radius: var(--radius-md);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.result-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.result-badge.pass { background-color: #DCFCE7; color: var(--color-success); }
+.result-badge.fail { background-color: #FEE2E2; color: var(--color-error); }
+
+.score-summary-bar {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  margin-top: 20px;
+}
+
+.score-num { font-size: 2.8rem; font-weight: 800; color: var(--color-navy); }
