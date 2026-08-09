@@ -1,52 +1,50 @@
-# Lumen Academy — EdTech Online Learning Platform
+# Lumen Academy
 
-![Lumen Academy](https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop)
+Modern online learning platform interface with course discovery, learning flows, and student-focused UI.
 
-**Lumen Academy** is an online learning management platform featuring course catalog search, student dashboard, interactive video lesson player, quiz engines, and automated printable certificate generation.
+## Live Demo
 
----
-
-## 🚀 Live Demo
-
-- **Public Live Application**: [https://lumen-academy.onrender.com/](https://lumen-academy.onrender.com/)
+- **[View Live Demo](https://lumen-academy.onrender.com/)**
 - **GitHub Repository**: [https://github.com/AvixLabs-Official/Lumen-Academy](https://github.com/AvixLabs-Official/Lumen-Academy)
 
----
+## Overview
 
-## ✨ Key Features
+Lumen Academy is an online education platform and Learning Management System (LMS) designed for digital courses, skill bootcamps, and online academies.
 
-- **Course Catalog & Filtering**: Search by category (Web Development, UI/UX Design, Data Science, Product Management).
-- **Interactive Student Dashboard**: Progress tracking bars, enrolled course management, and lesson completion state.
-- **Video Lesson Player & Curriculum**: Interactive lesson navigation with module accordion and notes tab.
-- **Interactive Quiz Engine**: Multiple choice quizzes with real-time scoring and instant feedback.
-- **Certificate Generator**: Dynamic printable completion certificates generated upon course completion.
+The application includes course search & category filtering, an interactive video lesson player with module navigation, a quiz engine, progress tracking, and dynamic completion certificate generation.
 
----
+> **Disclaimer**: This is a portfolio demonstration project and not a client project.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend**: HTML5, Vanilla CSS3, JavaScript (ES6+)
-- **Backend**: Node.js `server.js` HTTP Server
-- **Deployment**: Render Web Service
+- Course catalog search & category filtering (Dev, Design, Data, Management)
+- Interactive lesson player with curriculum sidebar navigation
+- Student learning progress tracker
+- Quiz engine with multiple choice questions and instant scoring
+- Automated printable completion certificate generator
 
----
+## Technologies
 
-## 💻 Local Installation & Setup
+- HTML5
+- CSS3 (Clean Professional UI)
+- JavaScript (ES6+ Quiz & Progress State)
+- Node.js HTTP Server (`server.js`)
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/AvixLabs-Official/Lumen-Academy.git
-   cd Lumen-Academy
-   ```
+## Screenshots
 
-2. **Start Node Server**:
-   ```bash
-   node server.js
-   ```
-   Open `http://localhost:8086` in your browser.
+![Lumen Academy Interface](images/lumen_academy_preview.jpg)
 
----
+## Responsive Design
 
-## 📄 License
+Engineered and tested across viewports:
+- Desktop (1440px +)
+- Tablet (768px – 1024px)
+- Mobile (360px – 480px)
 
-Developed by **[Avix / AvixLabs](https://github.com/AvixLabs-Official)**. Released under the MIT License.
+## Project Type
+
+Portfolio Demonstration · Education / LMS
+
+## Disclaimer
+
+This project is a portfolio demonstration created to showcase frontend development, UI/UX, and interactive web-development capabilities. It is not presented as client work.
