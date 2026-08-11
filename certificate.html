@@ -16,13 +16,21 @@
   <div class="certificate-page-bg">
     <!-- Action Bar -->
     <div class="no-print" style="margin-bottom:32px; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="dashboard.html" class="btn btn-outline" style="background:#FFF;">← Back to Dashboard</a>
-      <button class="btn btn-primary" onclick="window.print();">Download / Print Certificate 🖨️</button>
+      <a href="dashboard.html" class="btn btn-outline" style="background:#FFF; display:inline-flex; align-items:center; gap:8px;">← Back to Dashboard</a>
+      <button class="btn btn-primary" onclick="window.print();" style="display:inline-flex; align-items:center; gap:8px;">
+        <span>Download / Print Certificate</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+      </button>
     </div>
 
     <!-- Official Certificate Frame -->
     <div class="certificate-document-frame" id="certificate-frame">
-      <div class="cert-seal-icon">🎓</div>
+      <div class="cert-seal-icon" style="margin-bottom:12px;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+          <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+        </svg>
+      </div>
       <div class="cert-heading-top">LUMEN ACADEMY VERIFIED CERTIFICATE</div>
       <div class="cert-main-title">Certificate of Completion</div>
 

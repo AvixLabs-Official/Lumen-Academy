@@ -28,12 +28,14 @@ function initStudentDashboard() {
     <div class="dash-welcome-header">
       <div>
         <span class="section-tag">STUDENT PORTAL</span>
-        <h1 style="font-size:2.4rem;">Good morning, Alex. 👋</h1>
-        <p style="color:var(--text-muted); font-size:1.05rem;">You're on a <strong>7-day learning streak 🔥</strong>. Keep building your skills!</p>
+        <h1 style="font-size:2.4rem;">Good morning, Alex.</h1>
+        <p style="color:var(--text-muted); font-size:1.05rem;">You're on a <strong>7-day learning streak</strong>. Keep building your skills!</p>
       </div>
 
       <div class="streak-badge-card">
-        <span style="font-size:1.8rem;">🔥</span>
+        <div style="width:40px; height:40px; border-radius:10px; background:rgba(249,115,22,0.12); color:#F97316; display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+        </div>
         <div>
           <strong style="font-size:1.2rem; display:block;">7 Days</strong>
           <span style="font-size:0.75rem; color:var(--text-muted);">Current Streak</span>
@@ -79,7 +81,10 @@ function initStudentDashboard() {
             </div>
           </div>
 
-          <a href="lesson.html?id=${activeCourse.id}" class="btn btn-primary" style="margin-top:20px;">Resume Course →</a>
+          <a href="lesson.html?id=${activeCourse.id}" class="btn btn-primary" style="margin-top:20px; display:inline-flex; align-items:center; gap:8px;">
+            <span>Resume Course</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
         </div>
 
         <div class="cl-thumb-box">
@@ -136,7 +141,10 @@ function initStudentDashboard() {
 
                   <div class="course-card-footer" style="margin-top:20px;">
                     <span style="font-size:0.8rem; color:var(--text-muted);">Last active ${item.lastAccessed}</span>
-                    <a href="lesson.html?id=${course.id}" class="btn btn-primary btn-sm">Go to Class →</a>
+                    <a href="lesson.html?id=${course.id}" class="btn btn-primary btn-sm" style="display:inline-flex; align-items:center; gap:6px;">
+                      <span>Go to Class</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -151,11 +159,16 @@ function initStudentDashboard() {
         <div class="certificates-list-grid">
           ${certs.map(cert => `
             <div class="cert-card-item">
-              <div style="font-size:2rem; margin-bottom:12px;">🏆</div>
+              <div style="width:44px; height:44px; border-radius:12px; background:rgba(234,179,8,0.12); color:#EAB308; display:flex; align-items:center; justify-content:center; margin-bottom:14px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path></svg>
+              </div>
               <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--color-primary); font-weight:700;">Certificate of Completion</span>
               <h3 style="font-size:1.3rem; margin:8px 0;">${cert.courseTitle}</h3>
               <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:16px;">Issued on ${cert.issueDate} • ID: ${cert.id}</p>
-              <a href="certificate.html?id=${cert.id}" class="btn btn-outline btn-sm">View Certificate ↗</a>
+              <a href="certificate.html?id=${cert.id}" class="btn btn-outline btn-sm" style="display:inline-flex; align-items:center; gap:6px;">
+                <span>View Certificate</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
           `).join('')}
         </div>

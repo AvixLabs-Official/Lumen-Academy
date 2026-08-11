@@ -87,7 +87,7 @@ function initCourseCatalog() {
             <img src="${c.thumbnail}" alt="${c.title}" loading="lazy">
             <span class="course-cat-tag">${c.category}</span>
             <button class="bookmark-btn ${isSaved ? 'active' : ''}" data-id="${c.id}" aria-label="Save Course">
-              ${isSaved ? '★' : '☆'}
+              ${isSaved ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>` : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`}
             </button>
           </div>
 
@@ -97,9 +97,9 @@ function initCourseCatalog() {
             </h3>
             <p class="course-card-inst">by ${inst ? inst.name : 'Lumen Faculty'}</p>
 
-            <div class="course-card-meta">
-              <span>★ ${c.rating} (${c.reviewCount})</span>
-              <span>⏱ ${c.duration}</span>
+            <div class="course-card-meta" style="display:flex; align-items:center; gap:10px;">
+              <span style="display:inline-flex; align-items:center; gap:4px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>${c.rating} (${c.reviewCount})</span>
+              <span style="display:inline-flex; align-items:center; gap:4px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>${c.duration}</span>
               <span>• ${c.level}</span>
             </div>
 
@@ -115,7 +115,10 @@ function initCourseCatalog() {
             <div class="course-card-footer">
               <span class="course-card-price">${c.priceFormatted}</span>
               ${enrolledObj ? `
-                <a href="lesson.html?id=${c.id}" class="btn btn-primary btn-sm">Continue →</a>
+                <a href="lesson.html?id=${c.id}" class="btn btn-primary btn-sm" style="display:inline-flex; align-items:center; gap:6px;">
+                  <span>Continue</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
               ` : `
                 <button class="btn btn-outline btn-sm enroll-trigger-btn" data-id="${c.id}">Enroll Now</button>
               `}

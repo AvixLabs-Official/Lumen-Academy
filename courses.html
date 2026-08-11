@@ -27,7 +27,10 @@
       </nav>
 
       <div class="nav-actions nav-actions-desktop">
-        <a href="dashboard.html" class="btn btn-primary">My Dashboard 👤</a>
+        <a href="dashboard.html" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:8px;">
+          <span>My Dashboard</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </a>
       </div>
     </div>
   </header>
@@ -42,7 +45,7 @@
 
       <!-- Search Bar -->
       <div class="catalog-search-bar">
-        <span style="font-size:1.2rem; color:var(--text-muted);">🔍</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" id="catalog-search-input" placeholder="Search by course title, skill, or keyword (e.g. Figma, JavaScript, Data)..." class="search-input-control">
       </div>
 
