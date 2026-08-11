@@ -96,9 +96,13 @@
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 16px;
   margin-bottom: 32px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dash-tab-btn {
+  flex-shrink: 0;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-muted);

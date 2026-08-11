@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileMenu();
+  initMobileFilterSheet();
 });
 
 function initHeaderScroll() {
@@ -45,4 +46,29 @@ function closeMobileDrawer() {
     drawer.classList.remove('active');
     document.body.style.overflow = '';
   }
+}
+
+function initMobileFilterSheet() {
+  const openBtn = document.getElementById('mobile-filter-trigger');
+  const sheet = document.getElementById('mobile-filter-sheet');
+  const backdrop = document.getElementById('mobile-filter-backdrop');
+  const closeBtn = document.getElementById('mobile-filter-close');
+
+  if (!openBtn || !sheet) return;
+
+  function openSheet() {
+    sheet.classList.add('active');
+    if (backdrop) backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSheet() {
+    sheet.classList.remove('active');
+    if (backdrop) backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openSheet);
+  if (closeBtn) closeBtn.addEventListener('click', closeSheet);
+  if (backdrop) backdrop.addEventListener('click', closeSheet);
 }

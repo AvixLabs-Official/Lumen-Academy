@@ -422,3 +422,89 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
 }
 
 .reveal-on-scroll.is-revealed { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   MOBILE BOTTOM DOCK & FILTER SHEET STYLES
+   ========================================================================== */
+.mobile-bottom-dock {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1900;
+  background-color: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 12px 12px;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.mobile-dock-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #94A3B8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.mobile-dock-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.mobile-dock-btn.active, .mobile-dock-btn:hover {
+  color: #38BDF8;
+}
+
+/* Mobile Slide-Up Filter Sheet */
+.mobile-filter-sheet {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  z-index: 2200;
+  background-color: #FFF;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 24px 20px 36px;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+  transition: bottom 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.mobile-filter-sheet.active {
+  bottom: 0;
+}
+
+.mobile-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2150;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.mobile-sheet-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}

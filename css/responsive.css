@@ -1,7 +1,25 @@
 /* ==========================================================================
-   LUMEN ACADEMY - Responsive Reflow Stylesheet
-   360px, 375px, 390px, 430px, 768px, 1024px, 1280px, 1920px
+   LUMEN ACADEMY - Master Ultra-Responsive Stylesheet
+   Supports all screen sizes down to 250px (Mobile, Foldables, Tablets, Desktop)
    ========================================================================== */
+
+/* Zero Horizontal Overflow Lock */
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  margin: 0 !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+h1, h2, h3, h4, .hero-headline, .course-title-big, .cert-recipient-name {
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
 
 @media (max-width: 1100px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -9,28 +27,124 @@
   .instructors-grid { grid-template-columns: repeat(3, 1fr); }
   .stats-bar-grid, .dash-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .continue-learning-card { grid-template-columns: 1fr; }
-  .lesson-player-grid { grid-template-columns: 1fr; }
+  .lesson-player-grid { grid-template-columns: 1fr; min-height: auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 900px) {
-  .nav-links, .nav-actions-desktop { display: none; }
-  .mobile-toggle { display: block; }
+  .nav-links, .nav-actions-desktop { display: none !important; }
+  .mobile-toggle { display: flex !important; align-items: center; justify-content: center; }
   .testimonials-grid { grid-template-columns: 1fr; }
+  
+  /* Lesson Player Grid Stack */
+  .lesson-player-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .lesson-main-stage {
+    padding: 16px !important;
+  }
+  .lesson-syllabus-sidebar {
+    width: 100% !important;
+    border-left: none !important;
+    border-top: 1px solid var(--border-color) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Show Mobile Bottom Navigation Dock */
+  .mobile-bottom-dock {
+    display: flex !important;
+  }
+
+  body {
+    padding-bottom: 70px !important;
+  }
+
+  .cat-pills-bar {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-bottom: 8px !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .cat-pill {
+    scroll-snap-align: start;
+    flex-shrink: 0 !important;
+  }
+
+  .catalog-search-bar {
+    width: 100% !important;
+  }
+
+  .catalog-filters-strip {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  .filter-select {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 650px) {
-  .container { padding: 0 20px; }
-  .courses-catalog-grid, .enrolled-courses-grid, .certificates-list-grid { grid-template-columns: 1fr; }
-  .instructors-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-bar-grid, .dash-stats-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 16px !important; }
+  .hero { padding: 40px 0 !important; }
+  
+  .hero-headline {
+    font-size: clamp(1.8rem, 8vw, 2.6rem) !important;
+    line-height: 1.15 !important;
+  }
+
+  .courses-catalog-grid, .enrolled-courses-grid, .certificates-list-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .instructors-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-bar-grid, .dash-stats-grid { grid-template-columns: 1fr !important; }
   .dash-welcome-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr !important; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .certificate-document-frame { padding: 30px 20px; }
-  .cert-recipient-name { font-size: 1.8rem; padding: 0 10px 4px; }
+
+  /* Certificate Frame Responsive Scaler */
+  .certificate-document-frame {
+    padding: 20px 16px !important;
+    max-width: 100% !important;
+  }
+  .cert-recipient-name {
+    font-size: clamp(1.4rem, 6vw, 2.2rem) !important;
+    padding: 0 4px 4px !important;
+  }
 }
 
-@media (max-width: 400px) {
-  .instructors-grid { grid-template-columns: 1fr; }
+/* Ultra-Narrow Mobile Screens (250px - 380px) */
+@media (max-width: 380px) {
+  .container { padding: 0 12px !important; }
+  .instructors-grid { grid-template-columns: 1fr !important; }
+  
+  .hero-headline {
+    font-size: clamp(1.4rem, 7.5vw, 2.1rem) !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem !important;
+  }
+
+  .stat-val-big {
+    font-size: 1.8rem !important;
+  }
+
+  .certificate-document-frame {
+    transform: scale(0.92);
+    transform-origin: top center;
+  }
 }
