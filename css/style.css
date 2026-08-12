@@ -122,6 +122,14 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
   margin-top: 12px;
 }
 
+.featured-header-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 20px;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
