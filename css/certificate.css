@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LUMEN ACADEMY - Official Printable Certificate Stylesheet
+   LUMEN ACADEMY - Official Printable & Ultra-Responsive Certificate Stylesheet
    ========================================================================== */
 
 .certificate-page-bg {
@@ -9,6 +9,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.cert-action-bar {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -24,6 +33,7 @@
   position: relative;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
   color: #111827;
+  box-sizing: border-box;
 }
 
 .cert-seal-icon {
@@ -65,6 +75,8 @@
   display: inline-block;
   padding: 0 40px 8px;
   margin: 16px 0 24px;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .cert-course-name {
@@ -72,6 +84,7 @@
   font-weight: 800;
   color: var(--color-navy);
   margin-bottom: 36px;
+  word-break: break-word;
 }
 
 .cert-footer-grid {
@@ -89,6 +102,88 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   TABLET & MOBILE BREAKPOINTS (<= 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .certificate-page-bg {
+    padding: 32px 12px 90px !important;
+  }
+
+  .cert-action-bar {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .cert-action-bar .btn {
+    width: 100% !important;
+  }
+
+  .certificate-document-frame {
+    padding: 32px 18px !important;
+    border-width: 6px !important;
+    outline-offset: -5px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .cert-seal-icon {
+    width: 56px !important;
+    height: 56px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .cert-seal-icon svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .cert-heading-top {
+    font-size: 0.7rem !important;
+    letter-spacing: 0.16em !important;
+  }
+
+  .cert-main-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .cert-recipient-name {
+    font-size: clamp(1.4rem, 6.5vw, 2.2rem) !important;
+    padding: 0 8px 6px !important;
+    margin: 12px 0 16px !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .cert-course-name {
+    font-size: 1.2rem !important;
+    margin-bottom: 24px !important;
+  }
+
+  .cert-footer-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-top: 28px !important;
+    padding-top: 24px !important;
+    text-align: center !important;
+  }
+
+  .cert-footer-grid > div {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .cert-signature-line {
+    display: inline-block !important;
+    padding-top: 4px !important;
+    border-top: 1px dashed #94A3B8 !important;
+    min-width: 180px !important;
+  }
 }
 
 @media print {
