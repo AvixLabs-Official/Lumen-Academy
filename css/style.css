@@ -191,13 +191,52 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
 }
 
 .brand-name {
-  font-size: 1.6rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.04em;
   color: var(--color-navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-surface);
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: var(--transition);
 }
 
-.brand-name span { color: var(--color-primary); }
+.brand-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #16A34A;
+  box-shadow: 0 0 8px #16A34A;
+  display: inline-block;
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(22, 163, 74, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+.brand-name-txt {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.brand-badge-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  background-color: var(--color-primary);
+  color: #FFF;
+  padding: 2px 7px;
+  border-radius: 10px;
+  letter-spacing: 0.08em;
+}
 
 .nav-links {
   display: flex;
@@ -215,9 +254,34 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
 .nav-link:hover { color: var(--color-primary); }
 
 .mobile-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
   display: none;
-  font-size: 1.5rem;
-  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+}
+
+.mobile-toggle:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFF;
+  transform: scale(1.05);
+}
+
+.mobile-toggle svg {
+  stroke: var(--text-primary);
+  transition: stroke 0.3s ease;
+}
+
+.mobile-toggle:hover svg {
+  stroke: #FFF;
 }
 
 /* Mobile Drawer */
@@ -507,4 +571,14 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
 .mobile-sheet-backdrop.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* Hide Mobile Bottom Dock when Side Panel Drawer or Modal is Open */
+body.drawer-open .mobile-bottom-dock,
+body:has(.mobile-drawer.active) .mobile-bottom-dock,
+body:has(.modal-overlay.active) .mobile-bottom-dock {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
 }

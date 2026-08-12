@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LUMEN ACADEMY - Master Ultra-Responsive Stylesheet
+   LUMEN ACADEMY - Master Ultra-Responsive & Luxury Mobile Stylesheet
    Supports all screen sizes down to 250px (Mobile, Foldables, Tablets, Desktop)
    ========================================================================== */
 
@@ -22,19 +22,19 @@ h1, h2, h3, h4, .hero-headline, .course-title-big, .cert-recipient-name {
 }
 
 @media (max-width: 1100px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .courses-catalog-grid, .enrolled-courses-grid { grid-template-columns: repeat(2, 1fr); }
-  .instructors-grid { grid-template-columns: repeat(3, 1fr); }
-  .stats-bar-grid, .dash-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .continue-learning-card { grid-template-columns: 1fr; }
-  .lesson-player-grid { grid-template-columns: 1fr; min-height: auto; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .courses-catalog-grid, .enrolled-courses-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .instructors-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .stats-bar-grid, .dash-stats-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+  .continue-learning-card { grid-template-columns: 1fr !important; }
+  .lesson-player-grid { grid-template-columns: 1fr !important; min-height: auto !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
 }
 
 @media (max-width: 900px) {
   .nav-links, .nav-actions-desktop { display: none !important; }
   .mobile-toggle { display: flex !important; align-items: center; justify-content: center; }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr !important; }
   
   /* Lesson Player Grid Stack */
   .lesson-player-grid {
@@ -59,6 +59,28 @@ h1, h2, h3, h4, .hero-headline, .course-title-big, .cert-recipient-name {
 
   body {
     padding-bottom: 70px !important;
+  }
+
+  .site-header {
+    height: 64px !important;
+  }
+
+  .header-container {
+    padding: 0 16px !important;
+  }
+
+  .brand-name {
+    padding: 4px 10px !important;
+    gap: 6px !important;
+  }
+
+  .brand-name-txt {
+    font-size: 0.85rem !important;
+  }
+
+  .brand-badge-tag {
+    font-size: 0.58rem !important;
+    padding: 1px 5px !important;
   }
 
   .cat-pills-bar {
@@ -105,9 +127,9 @@ h1, h2, h3, h4, .hero-headline, .course-title-big, .cert-recipient-name {
   
   .instructors-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .stats-bar-grid, .dash-stats-grid { grid-template-columns: 1fr !important; }
-  .dash-welcome-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .dash-welcome-header { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
-  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-bottom { flex-direction: column !important; gap: 12px !important; text-align: center !important; }
 
   /* Certificate Frame Responsive Scaler */
   .certificate-document-frame {

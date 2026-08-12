@@ -30,6 +30,7 @@ function initMobileMenu() {
 
   toggleBtn.addEventListener('click', () => {
     drawer.classList.add('active');
+    document.body.classList.add('drawer-open');
     document.body.style.overflow = 'hidden';
   });
 
@@ -44,6 +45,7 @@ function closeMobileDrawer() {
   const drawer = document.getElementById('mobile-drawer');
   if (drawer) {
     drawer.classList.remove('active');
+    document.body.classList.remove('drawer-open');
     document.body.style.overflow = '';
   }
 }
@@ -59,12 +61,14 @@ function initMobileFilterSheet() {
   function openSheet() {
     sheet.classList.add('active');
     if (backdrop) backdrop.classList.add('active');
+    document.body.classList.add('drawer-open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeSheet() {
     sheet.classList.remove('active');
     if (backdrop) backdrop.classList.remove('active');
+    document.body.classList.remove('drawer-open');
     document.body.style.overflow = '';
   }
 
