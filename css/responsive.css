@@ -134,6 +134,44 @@ h1, h2, h3, h4, .hero-headline, .course-title-big, .cert-recipient-name {
     min-width: 200px !important;
     scroll-snap-align: start;
   }
+
+  .footer {
+    padding: 48px 0 32px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 20px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+    padding-top: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .footer-col {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+  }
+
+  .footer-col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 650px) {
