@@ -388,7 +388,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
   font-weight: 600;
 }
 
-/* Instructors Section */
+/* Instructors Showcase */
 .instructors-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -403,24 +403,81 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.7rem); }
   padding: 24px 16px;
   text-align: center;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
 }
 
 .inst-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+}
+
+.inst-avatar-wrap {
+  position: relative;
+  margin-bottom: 14px;
 }
 
 .inst-avatar {
-  width: 88px;
-  height: 88px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 16px;
+  border: 3px solid var(--bg-card);
+  box-shadow: 0 0 0 2px var(--border-color), 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
 }
 
-.inst-name { font-size: 1.1rem; margin-bottom: 4px; }
-.inst-role { font-size: 0.78rem; color: var(--color-primary); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; }
+.inst-card:hover .inst-avatar {
+  box-shadow: 0 0 0 2px var(--color-primary), 0 6px 16px rgba(37, 99, 235, 0.2);
+}
+
+.inst-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.inst-role {
+  font-size: 0.76rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.inst-stats-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.inst-stat-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.inst-stat-pill.rating {
+  color: #B45309;
+  background-color: #FEF3C7;
+  border-color: #FDE68A;
+}
 
 /* Testimonials */
 .testimonials-grid {
